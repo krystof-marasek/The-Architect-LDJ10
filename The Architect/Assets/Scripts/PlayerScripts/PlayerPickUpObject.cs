@@ -10,7 +10,7 @@ public class PlayerPickUpObject : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        /*if (Input.GetKeyDown(KeyCode.E))
         {
             if (objectGrabbable == null)
             {
@@ -27,6 +27,32 @@ public class PlayerPickUpObject : MonoBehaviour
             else
             {
                 // Currently carrying something, drop
+                objectGrabbable.Drop();
+                objectGrabbable = null;
+            }
+        }*/
+
+        if (Input.GetMouseButtonDown(0)) // When mouse button is pressed
+        {
+            if (objectGrabbable == null)
+            {
+                // Try to grab the object
+                float pickUpDistance = 4f;
+                if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
+                {
+                    if (raycastHit.transform.TryGetComponent(out objectGrabbable))
+                    {
+                        objectGrabbable.Grab(objectGrabPointTransform);
+                    }
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0)) // When mouse button is released
+        {
+            if (objectGrabbable != null)
+            {
+                // Drop the object
                 objectGrabbable.Drop();
                 objectGrabbable = null;
             }
