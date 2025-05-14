@@ -24,7 +24,7 @@ public class KeypadInteractable : MonoBehaviour, IInteractable
         }
     }
 
-    private void ChangeToPlayerCamera()
+    public void ChangeToPlayerCamera()
     {
         cursor.Hide_ShowMouseCursor();
 
