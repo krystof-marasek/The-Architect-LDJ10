@@ -2,11 +2,36 @@ using UnityEngine;
 
 public class KeypadInteractable : MonoBehaviour, IInteractable
 {
+    public CursorController cursor;
+    private bool onKeypadCamera = false;
+    
     [SerializeField] private Camera keypadCamera;
+    [SerializeField] private Camera playerCamera;
 
     private void ChangeToKeypadCamera()
     {
-        Debug.Log("Interacted with keypad");
+        if (!onKeypadCamera)
+        {
+            cursor.Hide_ShowMouseCursor();
+
+            playerCamera.enabled = false;
+            keypadCamera.enabled = true;
+
+            onKeypadCamera = true;
+        }
+        else {
+            ChangeToPlayerCamera();
+        }
+    }
+
+    private void ChangeToPlayerCamera()
+    {
+        cursor.Hide_ShowMouseCursor();
+
+        keypadCamera.enabled = false;
+        playerCamera.enabled = true;
+
+        onKeypadCamera = false;
     }
 
     public void Interact(Transform interactorTransform)
