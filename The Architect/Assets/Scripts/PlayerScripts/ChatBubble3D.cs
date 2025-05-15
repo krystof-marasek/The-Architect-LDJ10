@@ -9,7 +9,7 @@ public class ChatBubble3D : MonoBehaviour {
 
         chatBubbleTransform.GetComponent<ChatBubble3D>().Setup(/*iconType,*/ text);
 
-        Destroy(chatBubbleTransform.gameObject, 6f);
+        Destroy(chatBubbleTransform.gameObject, 15f);
     }
 
     /*public enum IconType {

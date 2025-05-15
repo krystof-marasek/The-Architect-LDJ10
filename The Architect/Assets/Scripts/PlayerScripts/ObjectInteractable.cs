@@ -3,10 +3,11 @@ using UnityEngine;
 public class ObjectInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
+    [SerializeField] private string inspectText;
 
     public void Interact(Transform interactorTransform)
     {
-        ChatBubble3D.Create(transform.transform, new Vector3(-.3f, 1.7f, 0f), "Hello there!");
+        Debug.Log("interacted");
     }
 
     public string GetInteractText()
