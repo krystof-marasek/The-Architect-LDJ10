@@ -7,6 +7,7 @@ public class KeypadInteractable : MonoBehaviour, IInteractable
     
     [SerializeField] private Camera keypadCamera;
     [SerializeField] private Camera playerCamera;
+    [SerializeField] private string interactText;
 
     private void ChangeToKeypadCamera()
     {
@@ -41,7 +42,7 @@ public class KeypadInteractable : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "Insert code";
+        return interactText;
     }
 
     public Transform GetTransform()
