@@ -6,7 +6,7 @@ public class ObjectInteractable : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        Debug.Log("Interacted with an object");
+        ChatBubble3D.Create(transform.transform, new Vector3(-.3f, 1.7f, 0f), "Hello there!");
     }
 
     public string GetInteractText()
