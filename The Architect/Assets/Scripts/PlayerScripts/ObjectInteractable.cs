@@ -3,11 +3,22 @@ using UnityEngine;
 public class ObjectInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
-    [SerializeField] private string inspectText;
+    [TextArea][SerializeField] private string itemInspectInfo;
+    private InspectController inspectController;
+
+    private void Awake()
+    {
+        inspectController = FindAnyObjectByType<InspectController>();
+    }
 
     public void Interact(Transform interactorTransform)
     {
-        Debug.Log("interacted");
+        ShowInspectInfo();
+    }
+
+    public void ShowInspectInfo()
+    {
+        inspectController.Inspect(itemInspectInfo);
     }
 
     public string GetInteractText()
