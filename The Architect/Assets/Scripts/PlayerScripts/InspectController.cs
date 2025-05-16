@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class InspectController : MonoBehaviour
 {
-    [SerializeField] private float onScreenTimer;
+    //public float onScreenTimer;
     [SerializeField] private TextMeshProUGUI extraInfoUI;
     [SerializeField] private GameObject extraInfoBG;
     [HideInInspector] public bool startTimer;
-    private float timer;
+    private float inspectControllerTimer;
 
     private void Start()
     {
@@ -18,20 +18,20 @@ public class InspectController : MonoBehaviour
     {
         if (startTimer)
         {
-            timer -= Time.deltaTime;
+            inspectControllerTimer -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (inspectControllerTimer <= 0)
             {
-                timer = 0;
+                inspectControllerTimer = 0;
                 ClearInspect();
                 startTimer = false;
             }
         }
     }
 
-    public void Inspect(string newInfo)
+    public void Inspect(string newInfo, float onScreenTimer)
     {
-        timer = onScreenTimer;
+        inspectControllerTimer = onScreenTimer;
         startTimer = true;
         extraInfoBG.SetActive(true);
         extraInfoUI.text = newInfo;

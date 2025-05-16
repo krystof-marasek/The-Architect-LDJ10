@@ -3,7 +3,9 @@ using UnityEngine;
 public class ObjectInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
+
     [TextArea][SerializeField] private string itemInspectInfo;
+    [SerializeField] private float setOnScreenTime;
     private InspectController inspectController;
 
     private void Awake()
@@ -18,7 +20,7 @@ public class ObjectInteractable : MonoBehaviour, IInteractable
 
     public void ShowInspectInfo()
     {
-        inspectController.Inspect(itemInspectInfo);
+        inspectController.Inspect(itemInspectInfo, setOnScreenTime);
     }
 
     public string GetInteractText()
