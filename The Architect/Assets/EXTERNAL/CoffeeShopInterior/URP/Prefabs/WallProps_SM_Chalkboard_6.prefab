@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030973962}
   - component: {fileID: 1300868100844517050}
+  - component: {fileID: 6323733920055618125}
   m_Layer: 0
   m_Name: WallProps_SM_Chalkboard_6
   m_TagString: Untagged
@@ -48,12 +49,29 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.18, y: 1.7615039, z: 0.14529093}
-  m_Center: {x: -0, y: 0.014073849, z: -0.06726674}
+  m_Size: {x: 1.18, y: 1.7615039, z: 0.123786926}
+  m_Center: {x: -0, y: 0.014073849, z: -0.05651474}
+--- !u!114 &6323733920055618125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030973961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aac76cf0b27697439d012f6e5af9ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Reminisce
+  itemInspectInfo: Won't ever forget the dinner I met Jana in. I wanted to get a
+    donut, but I got so nervous that I ordered a croissant with coffee instead. Then,
+    ordered two cookies just so I could talk with her again and ask her on a date.
+  setOnScreenTime: 5
 --- !u!1 &1030973963
 GameObject:
   m_ObjectHideFlags: 0
