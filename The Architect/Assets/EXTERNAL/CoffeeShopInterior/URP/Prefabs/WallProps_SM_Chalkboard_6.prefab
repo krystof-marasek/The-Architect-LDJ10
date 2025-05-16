@@ -67,11 +67,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aac76cf0b27697439d012f6e5af9ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: Reminisce
+  interactText: Inspect
   itemInspectInfo: Won't ever forget the dinner I met Jana in. I wanted to get a
     donut, but I got so nervous that I ordered a croissant with coffee instead. Then,
-    ordered two cookies just so I could talk with her again and ask her on a date.
-  setOnScreenTime: 5
+    I ordered two cookies just so I could talk with her again and ask her on a date.
+  setOnScreenTime: 20
 --- !u!1 &1030973963
 GameObject:
   m_ObjectHideFlags: 0

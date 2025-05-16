@@ -3,7 +3,7 @@ using UnityEngine;
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
     private Animator animator;
-    private bool isOpen;
+    public bool isOpen;
 
     private void Awake()
     {
