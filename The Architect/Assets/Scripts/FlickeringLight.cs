@@ -3,8 +3,8 @@ using UnityEngine;
 public class FlickeringLight : MonoBehaviour
 {
     private Light theLight;
-    public float maxWait = 1;
-    public float maxFlicker = 0.2f;
+    private float maxWait = 1;
+    private float maxFlicker = 0.2f;
 
     float timer;
     float interval;
