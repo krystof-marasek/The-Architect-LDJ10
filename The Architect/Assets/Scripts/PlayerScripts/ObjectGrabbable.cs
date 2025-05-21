@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectGrabbable : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
 
     private Rigidbody objectRigidbody;
     private Transform objectGrabPointTransform;
