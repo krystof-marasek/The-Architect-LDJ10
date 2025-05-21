@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerPickUpObject : MonoBehaviour
 {
@@ -45,13 +46,7 @@ public class PlayerPickUpObject : MonoBehaviour
                         objectGrabbable.Grab(objectGrabPointTransform);
                     }
                 }
-            }
-        }
-
-        if (Input.GetMouseButtonUp(0)) // When mouse button is released
-        {
-            if (objectGrabbable != null)
-            {
+            } else if (objectGrabbable != null) {
                 // Drop the object
                 objectGrabbable.Drop();
                 objectGrabbable = null;

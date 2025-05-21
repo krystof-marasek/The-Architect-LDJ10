@@ -22,7 +22,6 @@ public class ObjectInteractable : MonoBehaviour, IInteractable
     public void Interact(Transform interactorTransform)
     {
         ShowInspectInfo();
-
         onInteract?.Invoke();
     }
 
